@@ -5,6 +5,7 @@ export const SCREEN_HEIGHT = typeof window !== 'undefined' ? window.screen.heigh
 export const AIRBNB_PINK = '#ff385c';
 export const AIRBNB_GRAY = '#ebebeb';
 export const AIRBNB_DARKGRAY = 'rgba(176, 176, 176, 1)';
+export const AIRBNB_DARKGRAY2 = '#484848';
 export const AIRBNB_GREEN = '#008489';
 
 export const Container : any = styled.div`
@@ -38,9 +39,28 @@ export const Container : any = styled.div`
     margin-left: ${({ ml } : any) => ml ?? '0px'};
     margin-right: ${({ mr } : any) => mr ?? '0px'};
     margin-bottom: ${({ mb } : any) => mb ?? '0px'};
+    top: ${({ top } : any) => top ?? 'null'};
+    right: ${({ right } : any) => right ?? 'null'};
+    left: ${({ left } : any) => left ?? 'null'};
+    right: ${({ right } : any) => right ?? 'null'};
+    cursor: ${({ cursor } : any) => cursor ?? 'null'};
 `;
 export const SpanContainer : any = styled.span`
     font-size: ${({ fs }: any) => fs ?? 10}px;
     color: ${({ color }: any) => color ?? 'black'};
     font-weight: ${({ fw }: any) => fw ?? 'normal'};
+    margin-top: ${({ mt } : any) => mt ?? '0px'};
+    margin-left: ${({ ml } : any) => ml ?? '0px'};
+    margin-right: ${({ mr } : any) => mr ?? '0px'};
+    margin-bottom: ${({ mb } : any) => mb ?? '0px'};
+`;
+export const InputContainer : any = styled.input`
+    width: ${({ w } : any) => w ?? `${SCREEN_WIDTH}px`};
+    height: ${({ h } : any) => h ?? `${SCREEN_HEIGHT}px`};
+    border-width: ${({ bw } : any) => bw ?? 0}px;
+    border-color: ${({ boc } : any) => boc ?? 'null'};
+    font-size: ${({ fs }: any) => fs ?? 10}px;
+    :focus {
+        outline-color: ${({ oc }: any) => oc ?? 'null'};
+    }
 `;
